@@ -9,10 +9,11 @@ let getMode=()=>{
 }
 
 let toggleSidebar=(mode)=>{
+    let sidebar=document.querySelector('.sidebar')
     if(mode=='mobile'){
-        document.querySelector('.sidebar').classList.add('hidden')
+        sidebar.classList.add('hidden')
     }else{
-        document.querySelector('.sidebar').classList.remove('hidden')
+        sidebar.classList.remove('hidden')
     }
 }
 
