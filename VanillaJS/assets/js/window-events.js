@@ -1,9 +1,12 @@
+const innerWidth = window.innerWidth;
 //initial check...(assuming mobile first...)
 if(innerWidth>768){
     changeTemplateColumns()
 }
 
 onresize=(e)=>{
+    const innerWidth = window.innerWidth;
+
     switch (true) {
     case innerWidth > 1024:
         changeTemplateColumns()

@@ -1,10 +1,18 @@
-const innerWidth = window.innerWidth;
 
 let getMode=()=>{
+    const innerWidth = window.innerWidth;
     if(innerWidth<768){
         return 'mobile'
     }else{
         return 'desktop'
+    }
+}
+
+let toggleSidebar=(mode)=>{
+    if(mode=='mobile'){
+        document.querySelector('.sidebar').classList.add('hidden')
+    }else{
+        document.querySelector('.sidebar').classList.remove('hidden')
     }
 }
 
@@ -21,8 +29,9 @@ let changeTemplateColumns=()=>{
             grid.classList.add(newLayout)
             //setting data attribute...
             grid.dataset.gridclassname=newLayout
-            grid.dataset.changeto=className
+            grid.dataset.gridchangeto=className
             grid.dataset.responsivemode=mode
+            toggleSidebar(mode)
         }
     })
 }

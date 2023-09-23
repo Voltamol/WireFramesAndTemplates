@@ -1,3 +1,15 @@
 body{
     height: 100vh;
 }
+
+.hidden{
+    display: none;
+}
+
+.hidden-scroll{
+    scrollbar-width: 0;
+}
+
+.hidden-scroll::-webkit-scrollbar{
+    display: none;
+}
