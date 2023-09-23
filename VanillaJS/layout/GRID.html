@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/flexbox.css">
+    <link rel="stylesheet" href="../assets/css/shapes.css">
+    <style>
+        body{
+        height: 100vh;
+      }
+      .grid-box{
+        display: grid;
+        grid-template-columns: auto auto;
+        overflow-y: scroll;
+        scrollbar-width: 0px;
+      }
+      .grid-box::-webkit-scrollbar{
+            display: none;
+        }
+        .grid-item{
+            border: 1px solid rgba(0, 0, 0,0.05);
+            cursor: pointer;
+        }
+        .grid-item:hover{
+            box-shadow: 5px 5px 30px rgba(0, 0, 0,0.1);
+        }
+
+      @media(min-width:768px){
+        .grid-box{
+            grid-template-columns: auto auto auto;
+            
+        }
+        
+      }
+    </style>
+</head>
+
+<body class="vertical-center">
+    <main class="grid-box occupy-space">
+        <div class="grid-item">hello</div>
+        <div class="grid-item">hello</div>
+        <div class="grid-item">hello</div>
+        <div class="grid-item">hello</div>
+        <div class="grid-item">hello</div>
+        <div class="grid-item">hello</div>
+        <div class="grid-item">hello</div>
+        <div class="grid-item">hello</div>
+        <div class="grid-item">hello</div>
+        <div class="grid-item">hello</div>
+        <div class="grid-item">hello</div>
+        <script>
+            Array.from(document.getElementsByClassName('grid-item')).forEach((item)=>{
+                item.classList.add('vertical-center')
+                item.style.height='300px'
+            })
+        </script>
+    </main>
+</body>
+</html>
