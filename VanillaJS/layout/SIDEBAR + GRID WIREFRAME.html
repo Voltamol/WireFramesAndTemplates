@@ -55,6 +55,15 @@
             border:1px solid;
         }
 
+        .hidden-scroll{
+            overflow-y: scroll;
+            scrollbar-width: 0;
+        }
+
+        .hidden-scroll::--webkit-scrollbar{
+            display: none;
+        }
+
     </style>
 </head>
 <body>
@@ -69,6 +78,8 @@
             </li>
             <li class="wireframe horizontal-end" style="gap:5px;padding-right: 10px">
                 <img src="../assets/svg/notifications-outline.svg" alt="" height="30" style="cursor: pointer;">
+
+                <div class="rounded wireframe" style="padding: 10px;">N</div>
             </li>
         </ul>
     </nav>
@@ -123,7 +134,28 @@
                 </li>
             </ul>
         </div>
-        <div class='occupy-space wireframe'></div>
+        <div class='occupy-space wireframe hidden-scroll' style="height: 90vh;">
+            <main class="grid responsive-grid col-grid1 occupy-space" data-gridclassname="col-grid1" data-gridchangeto="col-grid3" data-responsivemode='mobile'>
+                <div class="grid-item">hello</div>
+                <div class="grid-item">hello</div>
+                <div class="grid-item">hello</div>
+                <div class="grid-item">hello</div>
+                <div class="grid-item">hello</div>
+                <div class="grid-item">hello</div>
+                <div class="grid-item">hello</div>
+                <div class="grid-item">hello</div>
+                <div class="grid-item">hello</div>
+                <div class="grid-item">hello</div>
+                <div class="grid-item">hello</div>
+                <script>
+                    Array.from(document.getElementsByClassName('grid-item')).forEach((item)=>{
+                        item.classList.add('vertical-center')
+                        item.classList.add('wireframe')
+                        item.style.height='300px'
+                    })
+                </script>
+            </main>
+        </div>
         
     </section>
     <script src="../assets/js/grid-events.js"></script>
