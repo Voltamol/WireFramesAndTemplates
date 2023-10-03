@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/flexbox.css">
+    <link rel="stylesheet" href="assets/css/shapes.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/grid.css">
+    <link rel="stylesheet" href="assets/css/positions.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/forum.css">
+    <!--FONTS-->
+    <!--nunito-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Nunito:ital,wght@1,500&display=swap" rel="stylesheet">
+    <!--roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Nunito:ital,wght@1,500&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
+    <!---->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .sidebar{
+            transition: 1.5s;
+        }
+        .sidebar-items{
+            padding: 0;
+            gap: 5px;
+            list-style-type: none;
+        }
+        .sidebar-item{
+            gap: 5px;
+            padding: 10px;
+            position: relative;
+        }
+        .sidebar-item p{
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-item a{
+            position: absolute;
+        }
+        .wireframe{
+            color:gray;
+            border:1px solid;
+        }
+
+        .hidden-scroll{
+            overflow-y: scroll;
+            scrollbar-width: 0;
+        }
+
+        .hidden-scroll::--webkit-scrollbar{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="grid responsive-grid col-grid1" style="height: 70px;" data-gridclassname="col-grid1" data-gridchangeto="col-grid-sidebar-auto" data-responsivemode='mobile'>
+        <div class="sidebar-item horizontal-start wireframe nunito full-height">
+            <img src="assets/svg/people-outline.svg" alt="" height="50">
+            <p>hello Doctor Muvingi</p>
+        </div>
+        <ul class="grid col-grid-sidebar-auto-reverse wireframe full-height" style="list-style-type: none;padding:0;">
+            <li class="wireframe horizontal-center">
+                <div class="wireframe width-90 rounded" style="height: 40px;"></div>
+            </li>
+            <li class="wireframe horizontal-end" style="gap:5px;padding-right: 10px">
+                <img src="assets/svg/notifications-outline.svg" alt="" height="30" style="cursor: pointer;">
+
+                <div class="wireframe rounded" style="padding:10px 15px 10px;cursor: pointer;" data-bs-toggle="tooltip" data-bs-title="Nelson Liam">N</div>
+            </li>
+        </ul>
+    </nav>
+    <section class="occupy-space grid responsive-grid col-grid1" data-gridclassname="col-grid1" data-gridchangeto="col-grid-sidebar-auto-reverse" data-responsivemode='mobile'>
+        <div class='occupy-space wireframe hidden-scroll' style="height: 90vh;">
+          
+            <!--<main class="grid responsive-grid col-grid1 occupy-space" data-gridclassname="col-grid1" data-gridchangeto="col-grid3" data-responsivemode='mobile'>
+                <div class="grid-item">hello</div>
+                <div class="grid-item">hello</div>
+                <div class="grid-item">hello</div>
+                <div class="grid-item">hello</div>
+                <div class="grid-item">hello</div>
+                <div class="grid-item">hello</div>
+                <div class="grid-item">hello</div>
+                <div class="grid-item">hello</div>
+                <div class="grid-item">hello</div>
+                <div class="grid-item">hello</div>
+                <div class="grid-item">hello</div>
+                <script>
+                    Array.from(document.getElementsByClassName('grid-item')).forEach((item)=>{
+                        item.classList.add('vertical-center')
+                        item.classList.add('wireframe')
+                        item.style.height='300px'
+                    })
+                </script>
+            </main>-->
+            <main class="occupy-space grid-gap10 col-grid1 wireframe hidden-scroll" style="padding: 10px 5px 10px;">
+                <div class="wireframe rounded thread-item">
+                    
+                </div>
+                <div class="wireframe rounded thread-item">
+                    
+                </div>
+                <div class="wireframe rounded thread-item">
+                    
+                </div>
+                <div class="wireframe rounded thread-item">
+                    
+                </div>
+                <div class="wireframe rounded thread-item">
+                    
+                </div>
+                <div class="wireframe rounded thread-item">
+                    
+                </div>
+                <div class="wireframe rounded thread-item">
+                    
+                </div>
+                <div class="wireframe rounded thread-item">
+                    
+                </div>
+                <div class="wireframe rounded thread-item">
+                    
+                </div>
+                <div class="wireframe rounded thread-item">
+                    
+                </div>
+            </main>
+        </div>
+        <div class='occupy-space sidebar wireframe'>
+            <ul class="sidebar-items occupy-space vertical-start">
+                
+                <li class="sidebar-item width-90">
+                    <hr>
+                </li>
+    
+                <li class="sidebar-item width-90 horizontal-start wireframe rounded roboto">
+                    <img src="assets/svg/image-outline.svg" alt="" height="30">
+                    <p>item1</p>
+                    <a href="#" class="occupy-space"></a>
+                </li>
+    
+                <li class="sidebar-item width-90 horizontal-start wireframe rounded roboto">
+                    <img src="assets/svg/image-outline.svg" alt="" height="30">
+                    <p>hello world</p>
+                    <a href="#" class="occupy-space"></a>
+                </li>
+    
+                <li class="sidebar-item width-90 horizontal-start wireframe rounded roboto">
+                    <img src="assets/svg/image-outline.svg" alt="" height="30">
+                    <p>hello world</p>
+                    <a href="#" class="occupy-space"></a>
+                </li>
+    
+                <li class="sidebar-item width-90 horizontal-start wireframe rounded roboto">
+                    <img src="assets/svg/image-outline.svg" alt="" height="30">
+                    <p>hello world</p>
+                    <a href="#" class="occupy-space"></a>
+                </li>
+    
+                <li class="sidebar-item width-90 horizontal-start wireframe rounded roboto">
+                    <img src="assets/svg/image-outline.svg" alt="" height="30">
+                    <p>hello world</p>
+                    <a href="#" class="occupy-space"></a>
+                </li>
+    
+                <li class="sidebar-item width-90 horizontal-start wireframe rounded roboto">
+                    <img src="assets/svg/image-outline.svg" alt="" height="30">
+                    <p>hello world</p>
+                    <a href="#" class="occupy-space"></a>
+                </li>
+    
+                <li class="sidebar-item width-90 horizontal-start wireframe rounded roboto">
+                    <img src="assets/svg/image-outline.svg" alt="" height="30">
+                    <p>hello world</p>
+                    <a href="#" class="occupy-space"></a>
+                </li>
+            </ul>
+        </div>
+        
+    </section>
+    <script>
+        let triggerTooltips=()=>{
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        }
+
+        triggerTooltips()
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="assets/js/grid-events.js"></script>
+    <script src="assets/js/window-events.js"></script>
+</body>
+</html>
