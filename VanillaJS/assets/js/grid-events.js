@@ -10,6 +10,7 @@ let getMode=()=>{
 
 let toggleSidebar=(mode)=>{
     let sidebar=document.querySelector('.sidebar')
+    if(!sidebar) return
     if(mode=='mobile'){
         sidebar.classList.add('hidden')
     }else{
