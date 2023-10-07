@@ -38,9 +38,13 @@
 
         body{
             padding: 70px 0px 0px;
-            height: 100vh;
+            min-height: 200vh;
         }
-        
+        @media(min-width:768px){
+                body{
+                    min-height: 100vh;
+                }
+            }
 
         
     </style>
@@ -52,38 +56,35 @@
     </header>
     <section class="occupy-space">
         <div class="occupy-space grid responsive-grid col-grid1" data-gridclassname="col-grid1" data-gridchangeto="col-grid2" data-responsivemode='mobile'>
-            <div class="occupy-space wireframe grid-col"></div>
-            <div class="occupy-space wireframe grid-col"></div>
+            <div class="occupy-space wireframe vertical-start" style="gap:3%;padding-top: 1%;" >
+                <div class="width-90 rounded bg-light" style="height: 20%;"></div>
+                <div class="width-90 rounded bg-light" style="height: 75%;"></div>
+            </div>
+            <div class="occupy-space wireframe vertical-center">
+                <div class="occupy-space-90 bg-light rounded"></div>
+            </div>
         </div>
     </section>
     <section class="occupy-space">
         <div class="occupy-space grid responsive-grid col-grid1" data-gridclassname="col-grid1" data-gridchangeto="col-grid2" data-responsivemode='mobile'>
-            <div class="occupy-space wireframe grid-col"></div>
-            <div class="occupy-space wireframe grid-col"></div>
+            <div class="occupy-space wireframe vertical-center">
+                <div class="occupy-space-90 bg-light rounded"></div>
+            </div>
+            <div class="occupy-space wireframe vertical-start" style="gap:3%;padding-top: 1%;" >
+                <div class="width-90 rounded bg-light" style="height: 20%;"></div>
+                <div class="width-90 rounded bg-light" style="height: 75%;"></div>
+            </div>
         </div>
     </section>
     <section class="occupy-space">
         <div class="occupy-space grid responsive-grid col-grid1" data-gridclassname="col-grid1" data-gridchangeto="col-grid2" data-responsivemode='mobile'>
-            <div class="occupy-space wireframe grid-col"></div>
-            <div class="occupy-space wireframe grid-col"></div>
-        </div>
-    </section>
-    <section class="occupy-space">
-        <div class="occupy-space grid responsive-grid col-grid1" data-gridclassname="col-grid1" data-gridchangeto="col-grid2" data-responsivemode='mobile'>
-            <div class="occupy-space wireframe grid-col"></div>
-            <div class="occupy-space wireframe grid-col"></div>
-        </div>
-    </section>
-    <section class="occupy-space">
-        <div class="occupy-space grid responsive-grid col-grid1" data-gridclassname="col-grid1" data-gridchangeto="col-grid2" data-responsivemode='mobile'>
-            <div class="occupy-space wireframe grid-col"></div>
-            <div class="occupy-space wireframe grid-col"></div>
-        </div>
-    </section>
-    <section class="occupy-space">
-        <div class="occupy-space grid responsive-grid col-grid1" data-gridclassname="col-grid1" data-gridchangeto="col-grid2" data-responsivemode='mobile'>
-            <div class="occupy-space wireframe grid-col"></div>
-            <div class="occupy-space wireframe grid-col"></div>
+            <div class="occupy-space wireframe vertical-start" style="gap:3%;padding-top: 1%;" >
+                <div class="width-90 rounded bg-light" style="height: 20%;"></div>
+                <div class="width-90 rounded bg-light" style="height: 75%;"></div>
+            </div>
+            <div class="occupy-space wireframe vertical-center">
+                <div class="occupy-space-90 bg-light rounded"></div>
+            </div>
         </div>
     </section>
     

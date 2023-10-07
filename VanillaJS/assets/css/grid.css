@@ -1,5 +1,6 @@
 .grid{
     display: grid;
+    place-items: center;
 }
 
 .grid-gap5{
@@ -33,8 +34,12 @@
 
 .col-grid4{
     grid-template-columns:auto auto auto auto;
+    
 }
 
-.grid-col{
-    height: inherit
+.col-grid-one-two{
+    grid-template-columns: 1fr 2fr;
+    gap: 0;
 }
+
+
