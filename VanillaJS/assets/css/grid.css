@@ -20,7 +20,11 @@
 }
 
 .col-grid-sidebar-auto-reverse{
-    grid-template-columns:2fr 1fr;
+    grid-template-columns:auto 300px;
+}
+
+.col-grid2{
+    grid-template-columns: auto auto;
 }
 
 .col-grid3{
