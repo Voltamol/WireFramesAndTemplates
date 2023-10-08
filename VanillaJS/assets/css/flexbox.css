@@ -22,10 +22,10 @@
 .hidden-horizontal-around{display: none;justify-content: space-around;align-items: center;}
 .hidden-horizontal-between{display: none;justify-content: space-between;align-items: center;}
 
-.left{
+.align-left{
     align-self: flex-start;
 }
 
-.right{
+.align-right{
     align-self: flex-end;
 }
