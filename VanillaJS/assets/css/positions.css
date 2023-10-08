@@ -32,6 +32,11 @@
     position:absolute;
     right: 0;
 }
+.absolute-right-5{
+    position:absolute;
+    right: 5px;
+}
+
 
 .absolute-right-10{
     position:absolute;

@@ -21,3 +21,11 @@
 .hidden-horizontal-end{display: none;justify-content: flex-end;align-items: center;}
 .hidden-horizontal-around{display: none;justify-content: space-around;align-items: center;}
 .hidden-horizontal-between{display: none;justify-content: space-between;align-items: center;}
+
+.left{
+    align-self: flex-start;
+}
+
+.right{
+    align-self: flex-end;
+}
