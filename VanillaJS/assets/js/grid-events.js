@@ -33,7 +33,7 @@ let changeTemplateColumns=()=>{
             grid.dataset.gridclassname=newLayout
             grid.dataset.gridchangeto=className
             grid.dataset.responsivemode=mode
-            toggleSidebar(mode)
+            //toggleSidebar(mode)
         }
     })
 }

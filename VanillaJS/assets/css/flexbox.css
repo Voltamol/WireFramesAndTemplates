@@ -29,3 +29,9 @@
 .align-right{
     align-self: flex-end;
 }
+
+@media(min-width:768px){
+    .responsive{
+        flex-direction: row;
+    }
+}
