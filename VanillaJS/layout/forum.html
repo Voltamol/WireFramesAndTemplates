@@ -70,6 +70,25 @@
             padding:5px;
             cursor: pointer;
         }
+        .top-trending{
+            background-color: white;
+            margin:0 10px 0 0;
+            width: 100%;
+        }
+
+        .custom-btn{
+            white-space: nowrap;
+        }
+        
+
+        @media(min-width:768px){
+            .top-trending{
+                flex-basis: 23%;
+            }
+            .custom-filters{
+                box-shadow: 2px 2px 10px rgba(160, 141, 141, 0.2);
+            }
+        }
 
         body{
             padding: 70px 0px 0px;
@@ -80,11 +99,11 @@
 </head>
 <body class="vertical-start">
     
-    <header class="header fixed-top d-flex align-items-center wireframe" style="height: 70px;">
+    <header class="header fixed-top d-flex align-items-center wireframe" style="height: 70px;background-color: white;">
         <h1>NAVBAR</h1>
     </header>
     
-    <section class="width-90">
+    <section class="width-90 bg-light">
         <div class="vertical-around">
             <div class="horizontal-start width-90" style="gap: 5px;padding: 5px;">
                 <img src="../assets/svg/flame.svg" alt="" width=20>
@@ -135,19 +154,19 @@
                 </div>
             </div>
             <br>
-            <div class="vertical-between responsive width-90 custom-card-shadow" style="padding: 5px;">
-                <div class="vertical-around responsive width-50">
-                    <div class="btn-cyan tag rounded horizontal-around" style="gap: 2px;">
+            <div class="vertical-between responsive width-90 rounded custom-filters" style="padding: 5px;gap:5px;">
+                <div class="vertical-around responsive width-50" style="gap: 10px;">
+                    <div class="custom-btn btn-cyan tag rounded horizontal-around" style="gap: 2px;">
                         <img src="../assets/svg/star-outline.svg" alt="" width=20 style="filter: invert();">
                         Most popular
                         <img src="../assets/svg/chevron-down-outline.svg" alt="" width=20 style="filter: invert();">
                     </div>
-                    <div class="btn-purple tag rounded horizontal-around" style="gap: 2px;">
+                    <div class="custom-btn btn-purple tag rounded horizontal-around" style="gap: 2px;">
                         <img src="../assets/svg/rocket-outline.svg" alt="" width=20 style="filter: invert();">
                         highest votes
                         <img src="../assets/svg/chevron-down-outline.svg" alt="" width=20 style="filter: invert();">
                     </div>
-                    <div class="btn-orange tag rounded horizontal-around" style="gap: 2px;">
+                    <div class="custom-btn btn-orange tag rounded horizontal-around" style="gap: 2px;">
                         <img src="../assets/svg/calendar-clear-outline.svg" alt="" width=20 style="filter: invert();">
                         latest thread
                         <img src="../assets/svg/chevron-down-outline.svg" alt="" width=20 style="filter: invert();">
@@ -162,17 +181,17 @@
                 <img src="../assets/svg/chatbubbles-outline.svg" alt="" width=20>
                 <h5>Threads and discussions</h5>
             </div>
-            <div class="vertical-between responsive width-100 bg-light">
-                <div class="vertical-start align-left" style="flex-basis: 75%;background-color: white;gap: 10px;padding-top: 10px;">
+            <div class="vertical-between responsive width-100">
+                <div class="vertical-start align-left" style="flex-basis: 75%;background-color: white;gap: 10px;padding: 10px 5px 0;">
 
                     <div class="horizontal-start width-100 ">
-                        <div class="vertical-start align-left" style="gap: 2px;width: 50px;">
+                        <!-- <div class="vertical-start align-left" style="gap: 2px;width: 50px;">
                             <img src="../assets/svg/caret-up-outline.svg" alt="" width=20>
                             <strong>32</strong>
                             <img src="../assets/svg/caret-down-outline.svg" alt="" width=20 style="filter: invert(0.5);">
-                        </div>
-                        <div class="card width-100">
-                            <div class="card-header vertical-between responsive">
+                        </div> -->
+                        <div class="card width-100" style="border:none;">
+                            <div class="card-header horizontal-between">
                               <span>
                                 <img src="../assets/svg/people-outline.svg" alt="" width=20>
                                 sean chirenje
@@ -200,13 +219,13 @@
                           </div>
                     </div>
                     <div class="horizontal-start width-100 ">
-                        <div class="vertical-start align-left" style="gap: 2px;width: 50px;">
+                        <!-- <div class="vertical-start align-left" style="gap: 2px;width: 50px;">
                             <img src="../assets/svg/caret-up-outline.svg" alt="" width=20>
                             <strong>32</strong>
                             <img src="../assets/svg/caret-down-outline.svg" alt="" width=20 style="filter: invert(0.5);">
-                        </div>
-                        <div class="card width-100">
-                            <div class="card-header vertical-between responsive">
+                        </div> -->
+                        <div class="card width-100" style="border:none;">
+                            <div class="card-header horizontal-between">
                               <span>
                                 <img src="../assets/svg/people-outline.svg" alt="" width=20>
                                 sean chirenje
@@ -235,13 +254,13 @@
                         
                     </div>
                     <div class="horizontal-start width-100 ">
-                        <div class="vertical-start align-left" style="gap: 2px;width: 50px;">
+                        <!-- <div class="vertical-start align-left" style="gap: 2px;width: 50px;">
                             <img src="../assets/svg/caret-up-outline.svg" alt="" width=20>
                             <strong>32</strong>
                             <img src="../assets/svg/caret-down-outline.svg" alt="" width=20 style="filter: invert(0.5);">
-                        </div>
-                        <div class="card width-100">
-                            <div class="card-header vertical-between responsive">
+                        </div> -->
+                        <div class="card width-100" style="border:none;">
+                            <div class="card-header horizontal-between">
                               <span>
                                 <img src="../assets/svg/people-outline.svg" alt="" width=20>
                                 sean chirenje
@@ -269,13 +288,13 @@
                           </div>
                     </div>
                     <div class="horizontal-start width-100 ">
-                        <div class="vertical-start align-left" style="gap: 2px;width: 50px;">
+                        <!-- <div class="vertical-start align-left" style="gap: 2px;width: 50px;">
                             <img src="../assets/svg/caret-up-outline.svg" alt="" width=20>
                             <strong>32</strong>
                             <img src="../assets/svg/caret-down-outline.svg" alt="" width=20 style="filter: invert(0.5);">
-                        </div>
-                        <div class="card width-100">
-                            <div class="card-header vertical-between responsive">
+                        </div> -->
+                        <div class="card width-100" style="border:none;">
+                            <div class="card-header horizontal-between">
                               <span>
                                 <img src="../assets/svg/people-outline.svg" alt="" width=20>
                                 sean chirenje
@@ -306,7 +325,7 @@
                     
                 </div>
                 
-                <div class="vertical-start align-left"  style="flex-basis: 23%;background-color: white;">
+                <div class="vertical-start align-left rounded top-trending" >
                     <div class="horizontal-start width-90" style="gap: 5px;padding: 5px;">
                         <img src="../assets/svg/flame.svg" alt="" width=20>
                         <h5>Top Trending Topics</h5>
