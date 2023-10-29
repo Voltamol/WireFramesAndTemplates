@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/flexbox.css">
+    <link rel="stylesheet" href="../assets/css/shapes.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/grid.css">
+    <link rel="stylesheet" href="../assets/css/positions.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/scroll.css">
+    <link rel="stylesheet" href="../assets/css/card.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!--FONTS-->
+    <!--nunito-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Nunito:ital,wght@1,500&display=swap" rel="stylesheet">
+    <!--roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Nunito:ital,wght@1,500&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
+    <!---->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+
+        .sidebar{
+            transition: 1.5s;
+        }
+        .sidebar-items{
+            padding: 0;
+            gap: 5px;
+            list-style-type: none;
+        }
+        .sidebar-item{
+            gap: 5px;
+            padding: 10px;
+            position: relative;
+        }
+        .sidebar-item p{
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-item a{
+            position: absolute;
+        }
+        .overview-card{
+            cursor: pointer;
+        }
+
+        .grid-item{
+            min-height: 200px;
+        }
+        .main-grid{
+            padding-left: 40px;
+        }
+
+        .hidden{
+            display: none;
+        }
+        .panel-default > .panel-heading {
+            color: #333;
+            background-color: #fcfcfc;
+            border-color: #ddd;
+            border-color: rgba(221,221,221,0.85);
+        }
+        
+        .alert{
+            
+            width:80%;
+            white-space: nowrap;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .alert p{
+            margin: 0;
+            padding:0
+        }
+
+        .date{
+            cursor: pointer;
+        }
+
+        @media(min-width:768px){
+            .main-grid{
+                padding-left: 80px;
+            }
+            .sidebar{
+                padding: 0;
+            }
+        }
+
+    </style>
+</head>
+<body style="padding: 35px 0 0;height: 100vh;overflow-y: hidden;">
+    <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand roboto">Manake Hospital Management</a>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Type To Filter" aria-label="Search">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Filter By</option>
+                <option value="1">FullName</option>
+                <option value="2">Email</option>
+                <option value="3">Specialty</option>
+              </select>
+            <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+            <!-- <button class="btn btn-outline-dark" type="submit">Search</button> -->
+          </form>
+        </div>
+      </nav>
+    <section class="grid responsive-grid col-grid-mini-sidebar-auto occupy-space">
+        <div class='occupy-space sidebar bg-light' style="padding: 30px 0 0;">
+            <ul class="sidebar-items occupy-space vertical-start">
+                <br>
+                
+    
+                <li class="sidebar-item width-90 vertical-center bg-light rounded roboto dropend"
+                data-bs-toggle="tooltip" 
+                data-bs-placement="right"
+                data-bs-title="notifications"
+                onclick="toggleOffcanvasContent('notifications')"
+                >
+                    <img src="../assets/svg/notifications-outline.svg" alt="" height="30">
+                    <a href="#" class="occupy-space" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></a>
+                    
+                </li>
+    
+                <li class="sidebar-item width-90 vertical-center bg-light rounded roboto"
+                data-bs-toggle="tooltip" 
+                data-bs-placement="right"
+                data-bs-title="calendar"
+                >
+                    <img src="../assets/svg/calendar-clear-outline.svg" alt="" height="30">
+                    <a href="#" class="occupy-space" data-bs-toggle="modal" data-bs-target="#exampleModal"></a>
+                </li>
+                
+                <li class="sidebar-item width-90 vertical-center bg-light rounded roboto"
+                data-bs-toggle="tooltip" 
+                data-bs-placement="right"
+                data-bs-title="profile"
+                onclick="toggleOffcanvasContent('profile')"
+                >
+                    <img src="../assets/svg/people-outline.svg" alt="" height="30">
+                    <a href="#" class="occupy-space" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></a>
+                </li>
+    
+                <li class="sidebar-item width-90 vertical-center bg-light rounded roboto"
+                data-bs-toggle="tooltip" 
+                data-bs-placement="right"
+                data-bs-title="reports"
+                >
+                    <img src="../assets/svg/document-text-outline.svg" alt="" height="30">
+                    <a href="#" class="occupy-space" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></a>
+                </li>
+    
+                <li class="sidebar-item width-90 vertical-center bg-light rounded roboto"
+                data-bs-toggle="tooltip" 
+                data-bs-placement="right"
+                data-bs-title="settings"
+                >
+                    <img src="../assets/svg/settings-outline.svg" alt="" height="30">
+                    <a href="#" class="occupy-space" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></a>
+                </li>
+                <li>
+                    <div class="offcanvas offcanvas-start hidden-scroll" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                        
+                        <div class="occupy-space vertical-start relative offcanvas-content" style="padding: 20px 0 0;" id="notifications">
+                            <div class="alert alert-success">
+                                <p class="col-12 text-truncate">
+                                    <strong class="text-default">Well done,</strong> You have finished the job!
+                                </p>
+                                <button type="button" class="btn-close absolute-right-10" data-bs-dismiss="alert" aria-label="Close"></button>
+                              </div>
+                              <div class="alert alert-info">
+                                <p class="col-12 text-truncate">
+                                    <strong class="text-default">John</strong> sent you a friend request.
+                                </p>
+                                <button type="button" class="btn-close absolute-right-10" data-bs-dismiss="alert" aria-label="Close"></button>
+                              </div>
+                              <div class="alert alert-warning">
+                                <p class="col-12 text-truncate">
+                                    <strong class="text-default">Sam</strong> sent an important email.
+                                </p>
+                                <button type="button" class="btn-close absolute-right-10" data-bs-dismiss="alert" aria-label="Close"></button>
+                              </div>
+                              <div class="alert alert-danger">
+                                <p class="col-12 text-truncate">
+                                    <strong class="text-default">Server</strong> reported problems.
+                                </p>
+                                <button type="button" class="btn-close absolute-right-10" data-bs-dismiss="alert" aria-label="Close"></button>
+                              </div>
+                              <div class="alert alert-info">
+                                <p class="col-12 text-truncate">
+                                    <strong class="text-default">Received</strong> $1826 from the client.
+                                </p>
+                                <button type="button" class="btn-close absolute-right-10" data-bs-dismiss="alert" aria-label="Close"></button>
+                              </div>
+                              <div class="alert alert-danger">
+                                <p class="col-12 text-truncate">
+                                    <strong class="text-default">Server</strong> reported problems.
+                                </p>
+                                <button type="button" class="btn-close absolute-right-10" data-bs-dismiss="alert" aria-label="Close"></button>
+                              </div>
+                              <div class="alert alert-info">
+                                <p class="col-12 text-truncate">
+                                    <strong class="text-default">Received</strong> $1826 from the client.
+                                </p>
+                                <button type="button" class="btn-close absolute-right-10" data-bs-dismiss="alert" aria-label="Close"></button>
+                              </div>
+                              <div class="alert alert-danger">
+                                <p class="col-12 text-truncate">
+                                    <strong class="text-default">Server</strong> reported problems.
+                                </p>
+                                <button type="button" class="btn-close absolute-right-10" data-bs-dismiss="alert" aria-label="Close"></button>
+                              </div>
+                              <div class="alert alert-info">
+                                <p class="col-12 text-truncate">
+                                    <strong class="text-default">Received</strong> $1826 from the client.
+                                </p>
+                                <button type="button" class="btn-close absolute-right-10" data-bs-dismiss="alert" aria-label="Close"></button>
+                              </div>
+                              <div class="alert alert-danger">
+                                <p class="col-12 text-truncate">
+                                    <strong class="text-default">Server</strong> reported problems.
+                                </p>
+                                <button type="button" class="btn-close absolute-right-10" data-bs-dismiss="alert" aria-label="Close"></button>
+                              </div>
+                              <div class="alert alert-info">
+                                <p class="col-12 text-truncate">
+                                    <strong class="text-default">Received</strong> $1826 from the client.
+                                </p>
+                                <button type="button" class="btn-close absolute-right-10" data-bs-dismiss="alert" aria-label="Close"></button>
+                              </div>
+                        </div> 
+                        
+                        <div class="occupy-space vertical-start relative offcanvas-content" id="profile">
+                            <form style="padding: 20px 0 20px;">
+                                <div class="container relative">
+                                    <img src="../assets/images/doctor.jpg" alt="" class="rounded-circle profile-avatar custom-card-shadow">
+                                    <img 
+                                        src="../assets/svg/pencil-outline.svg"
+                                        alt="" 
+                                        class="absolute-bottom-10 custom-card-shadow rounded" 
+                                        width="30" 
+                                        style="right: 10px;padding: 2px;cursor: pointer;"
+                                        data-bs-toggle="tooltip" 
+                                        data-bs-placement="top"
+                                        data-bs-title="change image"
+                                    >
+                                </div>
+                                <div class="mb-3">
+                                    <label for="first-name" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="first-name" name="first-name" aria-describedby="first-name-help">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="last-name" class="form-label">last Name</label>
+                                    <input type="text" class="form-control" id="first-name" name="last-name">
+                                </div>
+
+                                <div class="mb-3">
+                                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-3">
+                                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                                  <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <div class="mb-3 form-check">
+                                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                  <label class="form-check-label" for="exampleCheck1">email me these changes</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Update</button>
+                              </form>
+                        </div> 
+                    
+                    </div>
+                </li>
+
+                <li>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Your Shifts</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body vertical-center">
+                                <div 
+                                class="rounded grid col-grid7"
+                                style="padding: 10px 20px 0;width: 320px;"
+                                >
+                                    <strong><p class="rounded">Mon</p></strong>
+                                    <strong><p class="rounded">Tue</p></strong>
+                                    <strong><p class="rounded">Wed</p></strong>
+                                    <strong><p class="rounded">Thu</p></strong>
+                                    <strong><p class="rounded">Fri</p></strong>
+                                    <strong><p class="rounded">Sat</p></strong>
+                                    <strong><p class="rounded">Sun</p></strong>
+                                    <p class="rounded date bg-info text-light" style="padding: 10px;white-space: nowrap;"
+                                    data-bs-toggle="tooltip" 
+                                    data-bs-placement="top"
+                                    data-bs-title="day shift (09:00-17:00)"
+                                    ><span style="visibility: hidden;">2</span> 1</p>
+                                
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;"><span style="visibility: hidden;">2</span>2</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;"><span style="visibility: hidden;">2</span>3</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;"><span style="visibility: hidden;">2</span>4</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;"><span style="visibility: hidden;">2</span>5</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;"><span style="visibility: hidden;">2</span>6</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;"><span style="visibility: hidden;">2</span>7</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;"><span style="visibility: hidden;">2</span>8</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;"><span style="visibility: hidden;">2</span>9</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;">10</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;">11</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;">12</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;">13</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;">14</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;">15</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;">16</p>
+                                    <p class="rounded date bg-dark text-light" style="padding: 10px;white-space: nowrap;"
+                                        data-bs-toggle="tooltip" 
+                                        data-bs-placement="top"
+                                        data-bs-title="night shift (18:00-22:00)"
+                                    >17</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;">18</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;">19</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;">20</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;">21</p>
+                                    <p class="rounded date bg-secondary text-light" style="padding: 10px;white-space: nowrap;"
+                                        data-bs-toggle="tooltip" 
+                                        data-bs-placement="top"
+                                        data-bs-title="double shift (09:00-17:00) & (18:00-22:00)"
+                                        >22</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;">23</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;">24</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;">25</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;">26</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;">27</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;">28</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;">29</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;">30</p>
+                                    <p class="rounded date bg-light" style="padding: 10px;white-space: nowrap;">31</p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="occupy-space hidden-scroll" style="padding: 50px 0 0;">
+            <table class="table nunito">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">FullName</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Specialty</th>
+                    <th scope="col">Appointments</th>
+                    <th scope="col">More Detail</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark Voltamol</td>
+                    <td>voltamol@gmail.com</td>
+                    <td>Radiologist</td>
+                    <td><button class="btn btn-dark">view</button></td>
+                    <td><button class="btn btn-outline-dark">view more</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob Chirenje</td>
+                    <td>sean.chirenje@students.uz.ac.zw</td>
+                    <td>Heart Surgeon</td>
+                    <td><button class="btn btn-dark">view</button></td>
+                    <td><button class="btn btn-outline-dark">view more</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Sean Chirenje</td>
+                    <td>seanchirenje@gmail.com</td>
+                    <td>Optician</td>
+                    <td><button class="btn btn-dark">view</button></td>
+                    <td><button class="btn btn-outline-dark">view more</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Calvin Klein</td>
+                    <td>cklein@gmail.com</td>
+                    <td>Neurosurgeon</td>
+                    <td><button class="btn btn-dark">view</button></td>
+                    <td><button class="btn btn-outline-dark">view more</button></td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+
+    <script>
+        let toggleOffcanvasContent=(containerID)=>{
+            Array.from(document.getElementsByClassName('offcanvas-content')).forEach((container)=>{
+                container.classList.add('hidden')
+            })
+            document.getElementById(containerID).classList.remove('hidden')
+        }
+    </script>
+    <script src="../assets/js/grid-events.js"></script>
+    <script src="../assets/js/window-events.js"></script>
+</body>
+</html>
