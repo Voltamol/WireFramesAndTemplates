@@ -20,6 +20,10 @@
     grid-template-columns:300px auto;
 }
 
+.col-grid-mini-sidebar-auto{
+    grid-template-columns:50px auto;
+}
+
 .col-grid-sidebar-auto-reverse{
     grid-template-columns:auto 300px;
 }
@@ -30,6 +34,11 @@
 
 .col-grid3{
     grid-template-columns:auto auto auto;
+}
+
+.col-grid3-small-row{
+    grid-template-columns:auto auto auto;
+    grid-template-rows: 200px;
 }
 
 .col-grid4{
