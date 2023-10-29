@@ -49,7 +49,7 @@
 .col-grid7{
     grid-template-columns:15px 15px 15px 15px 15px 15px 15px;
     row-gap: 1px;
-    column-gap: 27px;
+    column-gap: 28px;
 }
 
 .col-grid-one-two{
