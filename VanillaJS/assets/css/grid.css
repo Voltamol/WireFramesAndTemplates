@@ -46,6 +46,12 @@
     
 }
 
+.col-grid7{
+    grid-template-columns:15px 15px 15px 15px 15px 15px 15px;
+    row-gap: 1px;
+    column-gap: 27px;
+}
+
 .col-grid-one-two{
     grid-template-columns: 1fr 2fr;
     gap: 0;
