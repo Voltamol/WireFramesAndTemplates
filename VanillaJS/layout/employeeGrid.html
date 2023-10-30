@@ -102,17 +102,10 @@
 <body style="padding: 35px 0 0;height: 100vh;overflow-y: hidden;">
     <nav class="navbar bg-body-tertiary fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand roboto">Manake Hospital Management</a>
+          <a class="navbar-brand">Manake Hospital Management</a>
           <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Type To Filter" aria-label="Search">
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Filter By</option>
-                <option value="1">FullName</option>
-                <option value="2">Email</option>
-                <option value="3">Department</option>
-              </select>
-            <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-            <!-- <button class="btn btn-outline-dark" type="submit">Search</button> -->
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Search</button>
           </form>
         </div>
       </nav>
@@ -362,53 +355,166 @@
 
             </ul>
         </div>
-        <div class="occupy-space hidden-scroll" style="padding: 50px 0 0;">
-            <table class="table nunito">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">FullName</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Department</th>
-                    <th scope="col">Shifts</th>
-                    <th scope="col">More Detail</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark Voltamol</td>
-                    <td>voltamol@gmail.com</td>
-                    <td>Radiology</td>
-                    <td><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">view</button></td>
-                    <td><button class="btn btn-outline-dark">view more</button></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob Chirenje</td>
-                    <td>sean.chirenje@students.uz.ac.zw</td>
-                    <td>Cleaning</td>
-                    <td><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">view</button></td>
-                    <td><button class="btn btn-outline-dark">view more</button></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Sean Chirenje</td>
-                    <td>seanchirenje@gmail.com</td>
-                    <td>Optometry</td>
-                    <td><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">view</button></td>
-                    <td><button class="btn btn-outline-dark">view more</button></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td>Calvin Klein</td>
-                    <td>cklein@gmail.com</td>
-                    <td>Lab</td>
-                    <td><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">view</button></td>
-                    <td><button class="btn btn-outline-dark">view more</button></td>
-                  </tr>
-                </tbody>
-            </table>
+        <div class="occupy-space hidden-scroll" style="padding: 35px 0 0;">
+            <div 
+                class="grid responsive-grid col-grid1 occupy-space row-gap-30 nunito" 
+                data-gridclassname="col-grid1" 
+                data-gridchangeto="col-grid3" 
+                data-responsivemode='mobile'
+            >
+
+                <div class="vertical-around custom-card">
+                    <br>
+                    <div class="bg-light width-80 rounded">
+                        <img src="../assets/images/doctor.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="width-80 rounded horizontal-center">
+                        <h5 style="padding: 0;margin: 0;">Voltamol Chirenje</h5>
+                    </div>
+                    <div class="width-80 rounded horizontal-center">
+                        <h6 style="padding: 0;margin: 0;">Neurosurgeon</h6>
+                    </div>
+                    <div class="width-60 rounded horizontal-start" style="gap:2px">
+                        <span class="badge rounded-pill text-bg-success">available</span>
+                        <span class="badge rounded-pill text-bg-info">ward 7</span>
+                    </div>
+                    <br>
+                    <div class="width-80 rounded horizontal-center">
+                        <button class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">View Schedule</button>
+                    </div>
+                    <br>
+                </div>
+                <div class="vertical-around custom-card">
+                    <br>
+                    <div class="bg-light width-80 rounded">
+                        <img src="../assets/images/doctor.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="width-80 rounded horizontal-center">
+                        <h5 style="padding: 0;margin: 0;">Voltamol Chirenje</h5>
+                    </div>
+                    <div class="width-80 rounded horizontal-center">
+                        <h6 style="padding: 0;margin: 0;">Neurosurgeon</h6>
+                    </div>
+                    <div class="width-60 rounded horizontal-start" style="gap:2px">
+                        <span class="badge rounded-pill text-bg-success">available</span>
+                        <span class="badge rounded-pill text-bg-info">ward 7</span>
+                    </div>
+                    <br>
+                    <div class="width-80 rounded horizontal-center">
+                        <button class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">View Schedule</button>
+                    </div>
+                    <br>
+                </div>
+                <div class="vertical-around custom-card">
+                    <br>
+                    <div class="bg-light width-80 rounded">
+                        <img src="../assets/images/doctor.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="width-80 rounded horizontal-center">
+                        <h5 style="padding: 0;margin: 0;">Voltamol Chirenje</h5>
+                    </div>
+                    <div class="width-80 rounded horizontal-center">
+                        <h6 style="padding: 0;margin: 0;">Neurosurgeon</h6>
+                    </div>
+                    <div class="width-60 rounded horizontal-start" style="gap:2px">
+                        <span class="badge rounded-pill text-bg-success">available</span>
+                        <span class="badge rounded-pill text-bg-info">ward 7</span>
+                    </div>
+                    <br>
+                    <div class="width-80 rounded horizontal-center">
+                        <button class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">View Schedule</button>
+                    </div>
+                    <br>
+                </div>
+                <div class="vertical-around custom-card">
+                    <br>
+                    <div class="bg-light width-80 rounded">
+                        <img src="../assets/images/doctor.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="width-80 rounded horizontal-center">
+                        <h5 style="padding: 0;margin: 0;">Voltamol Chirenje</h5>
+                    </div>
+                    <div class="width-80 rounded horizontal-center">
+                        <h6 style="padding: 0;margin: 0;">Neurosurgeon</h6>
+                    </div>
+                    <div class="width-60 rounded horizontal-start" style="gap:2px">
+                        <span class="badge rounded-pill text-bg-success">available</span>
+                        <span class="badge rounded-pill text-bg-info">ward 7</span>
+                    </div>
+                    <br>
+                    <div class="width-80 rounded horizontal-center">
+                        <button class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">View Schedule</button>
+                    </div>
+                    <br>
+                </div>
+                <div class="vertical-around custom-card">
+                    <br>
+                    <div class="bg-light width-80 rounded">
+                        <img src="../assets/images/doctor.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="width-80 rounded horizontal-center">
+                        <h5 style="padding: 0;margin: 0;">Voltamol Chirenje</h5>
+                    </div>
+                    <div class="width-80 rounded horizontal-center">
+                        <h6 style="padding: 0;margin: 0;">Neurosurgeon</h6>
+                    </div>
+                    <div class="width-60 rounded horizontal-start" style="gap:2px">
+                        <span class="badge rounded-pill text-bg-success">available</span>
+                        <span class="badge rounded-pill text-bg-info">ward 7</span>
+                    </div>
+                    <br>
+                    <div class="width-80 rounded horizontal-center">
+                        <button class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">View Schedule</button>
+                    </div>
+                    <br>
+                </div>
+                <div class="vertical-around custom-card">
+                    <br>
+                    <div class="bg-light width-80 rounded">
+                        <img src="../assets/images/doctor.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="width-80 rounded horizontal-center">
+                        <h5 style="padding: 0;margin: 0;">Voltamol Chirenje</h5>
+                    </div>
+                    <div class="width-80 rounded horizontal-center">
+                        <h6 style="padding: 0;margin: 0;">Neurosurgeon</h6>
+                    </div>
+                    <div class="width-60 rounded horizontal-start" style="gap:2px">
+                        <span class="badge rounded-pill text-bg-success">available</span>
+                        <span class="badge rounded-pill text-bg-info">ward 7</span>
+                    </div>
+                    <br>
+                    <div class="width-80 rounded horizontal-center">
+                        <button class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">View Schedule</button>
+                    </div>
+                    <br>
+                </div>
+                <div class="vertical-around custom-card">
+                    <br>
+                    <div class="bg-light width-80 rounded">
+                        <img src="../assets/images/doctor.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="width-80 rounded horizontal-center">
+                        <h5 style="padding: 0;margin: 0;">Voltamol Chirenje</h5>
+                    </div>
+                    <div class="width-80 rounded horizontal-center">
+                        <h6 style="padding: 0;margin: 0;">Neurosurgeon</h6>
+                    </div>
+                    <div class="width-60 rounded horizontal-start" style="gap:2px">
+                        <span class="badge rounded-pill text-bg-success">available</span>
+                        <span class="badge rounded-pill text-bg-info">ward 7</span>
+                    </div>
+                    <br>
+                    <div class="width-80 rounded horizontal-center">
+                        <button class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">View Schedule</button>
+                    </div>
+                    <br>
+                </div>
+                
+                
+            </div>
+
+            </div>
         </div>
     </section>
     

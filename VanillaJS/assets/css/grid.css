@@ -57,4 +57,12 @@
     gap: 0;
 }
 
+.row-gap-10{
+    row-gap: 10px;
+}
+
+
+.row-gap-30{
+    row-gap: 30px;
+}
 
